@@ -39,15 +39,21 @@ class MainActivity : AppCompatActivity() {
         showText()
 
         binding.like.setOnClickListener {
+            mBitmap.eraseColor(0)
             showFace()
             showMouth(true)
             showEyes()
+            showText()
+            binding.imageView.setImageBitmap(mBitmap)
         }
 
         binding.dislike.setOnClickListener {
+            mBitmap.eraseColor(0)
             showFace()
             showMouth(false)
             showEyes()
+            showText()
+            binding.imageView.setImageBitmap(mBitmap)
         }
     }
 
